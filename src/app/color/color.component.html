@@ -1,0 +1,13 @@
+<div [style.backgroundColor]="color">
+  color
+</div>
+
+<!--<input #inputcolor type="text" (change)="changeColor(inputcolor)" class="form-control" >-->
+<input [(ngModel)]="color"
+       class="form-control" >
+
+<app-child-a [filsproperty]="color" (sendDataRequest)="RequestData($event)" ></app-child-a>
+
+<button class="btn btn-primary" (click)="loggerMesData()">log data</button>
+
+<a (click)="GoToCv()">Go to Cv</a>

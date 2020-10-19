@@ -1,0 +1,11 @@
+<div *ngIf="personnes">
+  <span *ngFor="let personne of personnes">
+
+      <li class="list-group-item" >
+          <img src="assets/images/{{ personne.path | defaultImage}}" alt="{{ personne.job }}"
+               id="item" class="rounded-circle" >
+          {{personne.name | titlecase}} {{personne.firstname | titlecase }}
+      </li>
+
+  </span>
+</div>

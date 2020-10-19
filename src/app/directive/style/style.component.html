@@ -1,0 +1,11 @@
+<p [ngStyle]="{
+  'color' : color ,
+  'background-color' : bgColor ,
+  'font-size' : size
+}">
+  style works!
+</p>
+
+<input type="text" class="form-control" [(ngModel)]="color">
+<input #RecupSize type="text" class="form-control" (change)="changeSize(RecupSize.value)">
+
